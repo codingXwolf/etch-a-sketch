@@ -6,21 +6,3 @@ h1 {
 .flex-container {
     display: flex;
 }
-
-/* .flex-container>div {
-    background-color: #f1f1f1;
-    width: 25px;
-    margin: 0px;
-    text-align: center;
-    line-height: 25px;
-    font-size: 15px;
-} */
-
-table {
-    margin: auto;
-}
-
-table td {
-    padding: 20px;
-    border: 2px solid black;
-}
