@@ -3,9 +3,13 @@ h1 {
     text-align: center;
 }
 
-/* .flex-container {
-    display: flex;
-} */
+.main-container {
+    display: grid;
+    margin:auto;
+    border: 1px solid black;
+    width: 960px;
+    height: 960px;
+    }
 
 .grid-object {
     padding: 1em;
