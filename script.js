@@ -17,20 +17,20 @@ function createGrid(rows, cols) {
 
     for (i = 0; i < (rows * cols); i++) {
         let newDivs = document.createElement("div");
-        newDivs.addEventListener("mousemove", (e) => {
-            e.target.style.backgroundColor = defaultColor;
-        });
+        // newDivs.addEventListener("mousemove", (e) => {
+        //     e.target.style.backgroundColor = defaultColor;
+        // });
+        setColor(defaultColor);
         mainContainer.appendChild(newDivs).className = "grid-object";
     };
 };
 
 createGrid(16, 16);
 
-function updateFirst (e) {
-    let divs = document.querySelectorAll('.grid-object');
-    divs.forEach(div => {
-        div.style.backgroundColor = e.target.value;
-    })
+function setColor(color) {
+    let selectDivs = document.querySelector('.grid-object');
+    console.log(selectDivs)
+    selectDivs.addEventListener("mousemove", (e) => {
+        e.target.style.backgroundColor = color;
+    });
 }
-
-inputColorChange.addEventListener('input', updateFirst, false);
