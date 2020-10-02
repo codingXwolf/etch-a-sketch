@@ -3,12 +3,13 @@ h1 {
     text-align: center;
 }
 
-.main-container {
+#main-container {
     display: grid;
     margin:auto;
     border: 1px solid black;
-    width: 960px;
-    height: 960px;
+    width: 560px;
+    height: 560px;
+    text-align: center;
     }
 
 .grid-object {
