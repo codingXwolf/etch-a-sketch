@@ -18,6 +18,15 @@ clearGrid.addEventListener('click', (e) => {
     location.reload();
 });
 
+//Resize Grid
+let resizeGrid = document.getElementById('resizeGrid');
+resizeGrid.addEventListener('click', (e) => {
+    let userGridInput = prompt('Please input number between 2 and 100');
+    if(userGridInput) {
+        createGrid(userGridInput, userGridInput);
+    }
+})
+
 
 //Create Grid
 function createGrid(rows, cols) {
