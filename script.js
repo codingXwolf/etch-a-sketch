@@ -10,7 +10,13 @@ let inputColorChange = document.getElementById('inputColorChange');
 inputColorChange.addEventListener('input', (e) => {
     console.log(e.target.value)
     defaultColor = e.target.value;
-})
+});
+
+//Clear Grid
+let clearGrid = document.getElementById('clearGrid');
+clearGrid.addEventListener('click', (e) => {
+    location.reload();
+});
 
 
 //Create Grid
