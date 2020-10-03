@@ -4,10 +4,13 @@ mainContainer.setAttribute('style', '')
 
 // Default color and color changes
 let defaultColor = '#000000';
-let colorChanges;
 
 //Change Color Button
 let inputColorChange = document.getElementById('inputColorChange');
+inputColorChange.addEventListener('input', (e) => {
+    console.log(e.target.value)
+    defaultColor = e.target.value;
+})
 
 
 //Create Grid
@@ -17,20 +20,11 @@ function createGrid(rows, cols) {
 
     for (i = 0; i < (rows * cols); i++) {
         let newDivs = document.createElement("div");
-        // newDivs.addEventListener("mousemove", (e) => {
-        //     e.target.style.backgroundColor = defaultColor;
-        // });
-        setColor(defaultColor);
+        newDivs.addEventListener("mousemove", (e) => {
+            e.target.style.backgroundColor = defaultColor;
+        });
         mainContainer.appendChild(newDivs).className = "grid-object";
     };
 };
 
 createGrid(16, 16);
-
-function setColor(color) {
-    let selectDivs = document.querySelector('.grid-object');
-    console.log(selectDivs)
-    selectDivs.addEventListener("mousemove", (e) => {
-        e.target.style.backgroundColor = color;
-    });
-}
