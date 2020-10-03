@@ -7,12 +7,17 @@ h1 {
     display: grid;
     margin:auto;
     border: 1px solid black;
-    width: 560px;
-    height: 560px;
+    box-sizing: border-box;
+    max-width: 560px;
+    max-height: 560px;
     text-align: center;
     }
 
 .grid-object {
     padding: 1em;
     border: 1px solid #ddd;
+    max-height: 100%;
+    max-width: 100%;
+    overflow-y: inherit;
+    overflow-x: inherit;
 }
