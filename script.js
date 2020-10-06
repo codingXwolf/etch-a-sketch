@@ -27,6 +27,24 @@ resizeGrid.addEventListener('click', (e) => {
     }
 })
 
+// Random Color
+const getRandomColor = () => {
+let letters = '0123456789ABCDEF';
+let color = '#';
+     for (let i = 0; i < 6; i++) {
+         color += letters[Math.floor(Math.random() * 16)];
+     }
+
+     return color;
+  };
+
+let randomColorBtn = document.getElementById('randomColor');
+randomColorBtn.addEventListener('click', (e) => {
+    defaultColor = getRandomColor();
+
+})
+
+
 
 //Create Grid
 function createGrid(rows, cols) {
