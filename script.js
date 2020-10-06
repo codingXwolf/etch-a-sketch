@@ -1,6 +1,5 @@
 // flex container
 let mainContainer = document.querySelector('#mainContainer');
-mainContainer.setAttribute('style', '')
 
 // Default color and color changes
 let defaultColor = '#000000';
@@ -18,22 +17,25 @@ clearGrid.addEventListener('click', (e) => {
     location.reload();
 });
 
+//Remove Grid
+function removeGrid() {
+    document.getElementById('mainContainer').innerHTML = '';
+}
+
 //Resize Grid
 let resizeGrid = document.getElementById('resizeGrid');
 resizeGrid.addEventListener('click', (e) => {
     let userGridInput = prompt('Please input number between 2 and 100');
     if (userGridInput) {
-        let gridDivs = document.getElementById('mainContainer').querySelectorAll('div');
-        console.log(gridDivs);
-        gridDivs.childNodes.remove();
-        // gridDivs.forEach(singleDiv => singleDiv.remove());
-        console.log(gridDivs, 'check if removed');
+        removeGrid();
         createGrid(userGridInput, userGridInput);
+    } else {
+        return 'Please select a number'
     }
 })
 
 // Random Color
-const getRandomColor = () => {
+function getRandomColor () {
     let letters = '0123456789ABCDEF';
     let color = '#';
     for (let i = 0; i < 6; i++) {
