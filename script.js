@@ -1,5 +1,5 @@
 // flex container
-let mainContainer = document.querySelector('#main-container');
+let mainContainer = document.querySelector('#mainContainer');
 mainContainer.setAttribute('style', '')
 
 // Default color and color changes
@@ -23,6 +23,10 @@ let resizeGrid = document.getElementById('resizeGrid');
 resizeGrid.addEventListener('click', (e) => {
     let userGridInput = prompt('Please input number between 2 and 100');
     if(userGridInput) {
+        let gridDivs = document.getElementById('main-container').querySelectorAll('div.grid-object');
+        console.log(gridDivs);
+        // mainContainer.style.gridTemplateColumns = '';
+        // mainContainer.style.gridTemplateRows = '';
         createGrid(userGridInput, userGridInput);
     }
 })
@@ -43,7 +47,6 @@ randomColorBtn.addEventListener('click', (e) => {
     defaultColor = getRandomColor();
     inputColorChange.value = defaultColor;
 })
-
 
 
 //Create Grid
