@@ -22,25 +22,26 @@ clearGrid.addEventListener('click', (e) => {
 let resizeGrid = document.getElementById('resizeGrid');
 resizeGrid.addEventListener('click', (e) => {
     let userGridInput = prompt('Please input number between 2 and 100');
-    if(userGridInput) {
-        let gridDivs = document.getElementById('main-container').querySelectorAll('div.grid-object');
+    if (userGridInput) {
+        let gridDivs = document.getElementById('mainContainer').querySelectorAll('div');
         console.log(gridDivs);
-        // mainContainer.style.gridTemplateColumns = '';
-        // mainContainer.style.gridTemplateRows = '';
+        gridDivs.childNodes.remove();
+        // gridDivs.forEach(singleDiv => singleDiv.remove());
+        console.log(gridDivs, 'check if removed');
         createGrid(userGridInput, userGridInput);
     }
 })
 
 // Random Color
 const getRandomColor = () => {
-let letters = '0123456789ABCDEF';
-let color = '#';
-     for (let i = 0; i < 6; i++) {
-         color += letters[Math.floor(Math.random() * 16)];
-     }
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
 
-     return color;
-  };
+    return color;
+};
 
 let randomColorBtn = document.getElementById('randomColor');
 randomColorBtn.addEventListener('click', (e) => {
