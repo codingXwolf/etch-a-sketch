@@ -41,7 +41,7 @@ let color = '#';
 let randomColorBtn = document.getElementById('randomColor');
 randomColorBtn.addEventListener('click', (e) => {
     defaultColor = getRandomColor();
-
+    inputColorChange.value = defaultColor;
 })
 
 
