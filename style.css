@@ -1,6 +1,11 @@
 h1 {
-    color: green;
+    color: black;
     text-align: center;
+    font-family: cursive;
+}
+
+p, input, button, label {
+    font-family: cursive;
 }
 
 #mainContainer {
@@ -23,5 +28,9 @@ h1 {
 }
 
 #buttonContainer {
+    text-align: center;
+}
+
+footer {
     text-align: center;
 }
