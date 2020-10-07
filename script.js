@@ -33,17 +33,6 @@ resizeGrid.addEventListener('input', (e) => {
     createGrid(defaultGrideSize, defaultGrideSize);
 })
 
-//Button with prompt. Will delete after changing input to number
-// resizeGrid.addEventListener('click', (e) => {
-//     let userGridInput = prompt('Please input number between 2 and 100');
-//     if (userGridInput) {
-//         removeGrid();
-//         createGrid(userGridInput, userGridInput);
-//     } else {
-//         return 'Please select a number'
-//     }
-//})
-
 // Random Color
 function getRandomColor () {
     let letters = '0123456789ABCDEF';
