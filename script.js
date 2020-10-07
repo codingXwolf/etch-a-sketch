@@ -10,7 +10,6 @@ let defaultGrideSize = 16;
 //Change Color Button
 let inputColorChange = document.getElementById('inputColorChange');
 inputColorChange.addEventListener('input', (e) => {
-    console.log(e.target.value)
     defaultColor = e.target.value;
 });
 
